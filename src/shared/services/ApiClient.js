@@ -14,9 +14,11 @@ This is the NetWorking
  */
 
 export const ApiClient = {
+    //getting the data
     get (){
 
     },
+    // posting the data
     async post(URL , DATA){
         try{
             const response =  await axios.post(URL,DATA);
@@ -26,9 +28,13 @@ export const ApiClient = {
             throw err;
         }
     },
+
+    // Updating the data
     Put(){
 
     },
+
+    // deletion of the data 
     delete(){
 
     }
