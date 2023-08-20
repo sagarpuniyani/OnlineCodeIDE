@@ -9,6 +9,12 @@ import { ApiClient } from '../../../shared/services/ApiClient';
 const Login = () => {
     const [Message , setMessage ] = useState('');
 
+    // style the components 
+    const mystyle = {
+        flexDirection: 'column',
+        alignItems: 'center',
+    };
+
     const emailRef = useRef();
     const passwrdRef = useRef();
 
@@ -35,12 +41,13 @@ const Login = () => {
 
 return (
     <>
-    <Container>
-    <p> {Message} </p>
-    <TextField inputRef={emailRef}  id="outlined-basic" label="email" variant="outlined" />
-    <TextField inputRef={passwrdRef} id="outlined-basic" label="password" type="password" variant="outlined" />
-    <Button onClick={doLogin} variant="contained">Register</Button>
-    </Container>
+            <Container style={mystyle } >
+
+            <p> {Message} </p>
+            <TextField inputRef={emailRef}  id="outlined-basic" label="email" variant="outlined" />
+            <TextField inputRef={passwrdRef} id="outlined-basic" label="password" type="password" variant="outlined" />
+            <Button onClick={doLogin} variant="contained">Register</Button>
+            </Container>
     </>
 )
 }
